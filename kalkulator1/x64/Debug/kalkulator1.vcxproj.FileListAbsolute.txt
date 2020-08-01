@@ -1,0 +1,4 @@
+C:\Users\Admin\source\repos\kalkulator1\kalkulator1\x64\Debug\kalkulator1.vcxprojAssemblyReference.cache
+C:\Users\Admin\source\repos\kalkulator1\kalkulator1\x64\Debug\kalkulator1.Plansza.resources
+C:\Users\Admin\source\repos\kalkulator1\kalkulator1\x64\Debug\kalkulator1.Pomoc.resources
+C:\Users\Admin\source\repos\kalkulator1\kalkulator1\x64\Debug\kalkulator1.vcxproj.GenerateResource.cache
