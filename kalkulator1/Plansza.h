@@ -392,6 +392,7 @@ namespace kalkulator1 {
 			this->button16->TabIndex = 15;
 			this->button16->Text = L"C";
 			this->button16->UseVisualStyleBackColor = false;
+			this->button16->Click += gcnew System::EventHandler(this, &Plansza::button16_Click);
 			// 
 			// button17
 			// 
@@ -458,6 +459,7 @@ namespace kalkulator1 {
 			this->button21->TabIndex = 18;
 			this->button21->Text = L"=";
 			this->button21->UseVisualStyleBackColor = false;
+			this->button21->Click += gcnew System::EventHandler(this, &Plansza::button21_Click);
 			// 
 			// button22
 			// 
@@ -830,6 +832,46 @@ private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ 
 	pierwsza = Convert::ToDouble(txtOkno->Text);
 	operacja = '/';
 	status = true;
+}
+private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ e) {
+	druga = Convert::ToDouble(txtOkno->Text);	
+
+	switch (operacja)
+	{
+	case '+':
+		//dodawanie
+		wynik = pierwsza + druga;
+		break;
+	case '-':
+		//odejmowanie
+		wynik = pierwsza - druga;
+		break;
+	case '*':
+		//mnożenie
+		wynik = pierwsza * druga;
+		break;
+	case '/':
+		// dzielenie
+		if (druga == 0) {
+			MessageBox::Show("Dzielenie przez zero jest niewykonalne !");
+		}
+		else {
+			wynik = pierwsza / druga;
+		}		
+		break;
+
+	default:
+		//W innym przypadku
+		break;
+	}
+
+	this->txtOkno->Text = Convert::ToString(wynik);
+}
+private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->txtOkno->Text = "0";
+	pierwsza = 0;
+	druga = 0;
+	status = false;
 }
 };
 }
