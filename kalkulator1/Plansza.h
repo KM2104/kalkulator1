@@ -449,6 +449,7 @@ namespace kalkulator1 {
 			this->button20->TabIndex = 19;
 			this->button20->Text = L"%";
 			this->button20->UseVisualStyleBackColor = false;
+			this->button20->Click += gcnew System::EventHandler(this, &Plansza::button20_Click);
 			// 
 			// button21
 			// 
@@ -474,8 +475,9 @@ namespace kalkulator1 {
 			this->button22->Name = L"button22";
 			this->button22->Size = System::Drawing::Size(120, 55);
 			this->button22->TabIndex = 22;
-			this->button22->Text = L"marża";
+			this->button22->Text = L"narzut";
 			this->button22->UseVisualStyleBackColor = false;
+			this->button22->Click += gcnew System::EventHandler(this, &Plansza::button22_Click);
 			// 
 			// button23
 			// 
@@ -487,8 +489,9 @@ namespace kalkulator1 {
 			this->button23->Name = L"button23";
 			this->button23->Size = System::Drawing::Size(120, 55);
 			this->button23->TabIndex = 23;
-			this->button23->Text = L"narzut";
+			this->button23->Text = L"marża";
 			this->button23->UseVisualStyleBackColor = false;
+			this->button23->Click += gcnew System::EventHandler(this, &Plansza::button23_Click);
 			// 
 			// button24
 			// 
@@ -502,6 +505,7 @@ namespace kalkulator1 {
 			this->button24->TabIndex = 24;
 			this->button24->Text = L"brutto->netto";
 			this->button24->UseVisualStyleBackColor = false;
+			this->button24->Click += gcnew System::EventHandler(this, &Plansza::button24_Click);
 			// 
 			// button25
 			// 
@@ -515,6 +519,7 @@ namespace kalkulator1 {
 			this->button25->TabIndex = 25;
 			this->button25->Text = L"netto->brutto";
 			this->button25->UseVisualStyleBackColor = false;
+			this->button25->Click += gcnew System::EventHandler(this, &Plansza::button25_Click);
 			// 
 			// menuStrip2
 			// 
@@ -862,6 +867,28 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 			wynik = pierwsza / druga;
 		}		
 		break;
+	case 'p':
+		//obliczamy procent (liczba->procent)
+		wynik = (pierwsza /100) * druga;
+		break;
+	case 'b':
+		//obliczamy brutto na podstawie nettoi VAT
+		wynik = pierwsza * (1 + (druga/100)) ;
+		break;
+	case 'n':
+		//obliczanie netto na podstawie brutto i VAT
+		wynik = pierwsza / (1 + (druga / 100));
+		break;
+	case 'm':
+		//obliczenie marży
+		//  marża = (cena zakupu - cena sprzedaży) / cena sprzedaży
+		wynik = ((druga - pierwsza) / druga) * 100;
+		break;
+	case 'x':
+		//obliczenie narzutu
+		// narzut = (cena sprzedaży - cena zakupu ) / cena zakupu
+		wynik = ((druga - pierwsza) / pierwsza) * 100;
+		break;
 
 	default:
 		//W innym przypadku
@@ -893,6 +920,31 @@ private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ 
 	wynik = Math::Pow(pierwsza, 2);  //Pow tj. potęga w funkcji Math koniczne dodanie po przecinku wykładnika potęgi
 	this->txtOkno->Text = Convert::ToString(wynik);
 	status = true;
+}
+private: System::Void button20_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	status = true;
+	operacja = 'p';      //procenty
+}
+private: System::Void button25_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	status = true;
+	operacja = 'b';      //brutto do netto
+}
+private: System::Void button24_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	status = true;
+	operacja = 'n';      //netto do brutto
+}
+private: System::Void button23_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	status = true;
+	operacja = 'm';      //marża
+}
+private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	status = true;
+	operacja = 'x';      //narzut
 }
 };
 }
