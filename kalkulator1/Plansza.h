@@ -379,6 +379,7 @@ namespace kalkulator1 {
 			this->button15->TabIndex = 16;
 			this->button15->Text = L"CE";
 			this->button15->UseVisualStyleBackColor = false;
+			this->button15->Click += gcnew System::EventHandler(this, &Plansza::button15_Click);
 			// 
 			// button16
 			// 
@@ -420,6 +421,7 @@ namespace kalkulator1 {
 			this->button18->TabIndex = 21;
 			this->button18->Text = L"√";
 			this->button18->UseVisualStyleBackColor = false;
+			this->button18->Click += gcnew System::EventHandler(this, &Plansza::button18_Click);
 			// 
 			// button19
 			// 
@@ -433,6 +435,7 @@ namespace kalkulator1 {
 			this->button19->TabIndex = 20;
 			this->button19->Text = L"a²";
 			this->button19->UseVisualStyleBackColor = false;
+			this->button19->Click += gcnew System::EventHandler(this, &Plansza::button19_Click);
 			// 
 			// button20
 			// 
@@ -865,6 +868,8 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 		break;
 	}
 
+	status = true;
+
 	this->txtOkno->Text = Convert::ToString(wynik);
 }
 private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -872,6 +877,22 @@ private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ 
 	pierwsza = 0;
 	druga = 0;
 	status = false;
+}
+private: System::Void button15_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->txtOkno->Text = "0";
+}
+private: System::Void button18_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	wynik = Math::Sqrt(pierwsza);    //Sqrt tj.pierwiastek w funkcji Math
+	this->txtOkno->Text = Convert::ToString(wynik);
+	status = true;
+}
+private: System::Void button19_Click(System::Object^ sender, System::EventArgs^ e) {
+	pierwsza = Convert::ToDouble(txtOkno->Text);
+	//wynik = pierwsza * pierwsza;   // możliwy też taki zapis
+	wynik = Math::Pow(pierwsza, 2);  //Pow tj. potęga w funkcji Math koniczne dodanie po przecinku wykładnika potęgi
+	this->txtOkno->Text = Convert::ToString(wynik);
+	status = true;
 }
 };
 }
