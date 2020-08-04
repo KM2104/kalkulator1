@@ -628,6 +628,7 @@ namespace kalkulator1 {
 			this->button27->TabIndex = 30;
 			this->button27->Text = L"odejmowanie";
 			this->button27->UseVisualStyleBackColor = false;
+			this->button27->Click += gcnew System::EventHandler(this, &Plansza::button27_Click);
 			// 
 			// button28
 			// 
@@ -641,6 +642,7 @@ namespace kalkulator1 {
 			this->button28->TabIndex = 29;
 			this->button28->Text = L"mnożenie";
 			this->button28->UseVisualStyleBackColor = false;
+			this->button28->Click += gcnew System::EventHandler(this, &Plansza::button28_Click);
 			// 
 			// pictureBox1
 			// 
@@ -711,6 +713,7 @@ namespace kalkulator1 {
 		}
 
 		double pierwsza, druga, wynik;     //zmienne do działań matematycznych
+		double testuj;
 		char operacja;                     // zmienna znaków matematycznych (+, -, /, X )
 		bool status = false;
 
@@ -758,6 +761,7 @@ private: System::Void finansowyToolStripMenuItem_Click_1(System::Object^ sender,
 private: System::Void graToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Plansza::Width = 310;
 	Plansza::Height = 650;
+	this->txtOkno->Text = "Zagramy ?";
 }
 private: System::Void przypnijToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Plansza::FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
@@ -824,7 +828,16 @@ private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ 
 	Wypisz(",");
 }
 private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
-	   }
+	Random^ losuj = gcnew Random;
+	pierwsza = losuj->Next(1, 20); 
+	druga = losuj->Next(1, 20);
+	testuj = pierwsza + druga;
+
+	this->txtOkno->Text = pierwsza + " + " + druga + " = ?";
+	status = true;
+	operacja = 't';
+	pictureBox1->Image = imageList1->Images[0];
+}
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
 	pierwsza = Convert::ToDouble(txtOkno->Text);
 	operacja = '+';
@@ -889,6 +902,17 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 		// narzut = (cena sprzedaży - cena zakupu ) / cena zakupu
 		wynik = ((druga - pierwsza) / pierwsza) * 100;
 		break;
+	case 't':
+		//Gra dodawanie losowych liczb
+		if (druga == testuj) {
+			this->txtOkno->Text = "Dobrze !";
+			this->pictureBox1->Image = imageList1->Images[2];
+		}
+		else {
+			this->txtOkno->Text = "żle...";
+			this->pictureBox1->Image = imageList1->Images[1];
+		}		
+		break;
 
 	default:
 		//W innym przypadku
@@ -897,7 +921,9 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 
 	status = true;
 
-	this->txtOkno->Text = Convert::ToString(wynik);
+	if (operacja != 't') {
+		this->txtOkno->Text = Convert::ToString(wynik);
+	}	
 }
 private: System::Void button16_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->txtOkno->Text = "0";
@@ -945,6 +971,28 @@ private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ 
 	pierwsza = Convert::ToDouble(txtOkno->Text);
 	status = true;
 	operacja = 'x';      //narzut
+}
+private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e) {
+	Random^ losuj = gcnew Random;
+	pierwsza = losuj->Next(1, 20);
+	druga = losuj->Next(1, pierwsza);
+	testuj = pierwsza - druga;
+
+	this->txtOkno->Text = pierwsza + " - " + druga + " = ?";
+	status = true;
+	operacja = 't';
+	pictureBox1->Image = imageList1->Images[0];
+}
+private: System::Void button28_Click(System::Object^ sender, System::EventArgs^ e) {
+	Random^ losuj = gcnew Random;
+	pierwsza = losuj->Next(1, 10);
+	druga = losuj->Next(1, 10);
+	testuj = pierwsza * druga;
+
+	this->txtOkno->Text = pierwsza + " * " + druga + " = ?";
+	status = true;
+	operacja = 't';
+	pictureBox1->Image = imageList1->Images[0];
 }
 };
 }
