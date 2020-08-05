@@ -22,6 +22,8 @@ namespace kalkulator1 {
 			//
 			//TODO: W tym miejscu dodaj kod konstruktora
 			//
+			Plansza::Width = 300;
+			Plansza::Height = 425;
 		}
 
 	protected:
@@ -163,7 +165,7 @@ namespace kalkulator1 {
 			this->txtOkno->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
 			this->txtOkno->ForeColor = System::Drawing::Color::White;
-			this->txtOkno->Location = System::Drawing::Point(15, 38);
+			this->txtOkno->Location = System::Drawing::Point(8, 33);
 			this->txtOkno->Name = L"txtOkno";
 			this->txtOkno->Size = System::Drawing::Size(270, 56);
 			this->txtOkno->TabIndex = 0;
@@ -177,7 +179,7 @@ namespace kalkulator1 {
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button1->Location = System::Drawing::Point(14, 293);
+			this->button1->Location = System::Drawing::Point(7, 265);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(55, 55);
 			this->button1->TabIndex = 1;
@@ -191,7 +193,7 @@ namespace kalkulator1 {
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button2->Location = System::Drawing::Point(68, 293);
+			this->button2->Location = System::Drawing::Point(61, 265);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(55, 55);
 			this->button2->TabIndex = 2;
@@ -205,7 +207,7 @@ namespace kalkulator1 {
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button3->Location = System::Drawing::Point(122, 293);
+			this->button3->Location = System::Drawing::Point(115, 265);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(55, 55);
 			this->button3->TabIndex = 3;
@@ -219,7 +221,7 @@ namespace kalkulator1 {
 			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button4->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button4->Location = System::Drawing::Point(122, 239);
+			this->button4->Location = System::Drawing::Point(115, 211);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(55, 55);
 			this->button4->TabIndex = 6;
@@ -233,7 +235,7 @@ namespace kalkulator1 {
 			this->button5->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button5->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button5->Location = System::Drawing::Point(68, 239);
+			this->button5->Location = System::Drawing::Point(61, 211);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(55, 55);
 			this->button5->TabIndex = 5;
@@ -247,7 +249,7 @@ namespace kalkulator1 {
 			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button6->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button6->Location = System::Drawing::Point(14, 239);
+			this->button6->Location = System::Drawing::Point(7, 211);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(55, 55);
 			this->button6->TabIndex = 4;
@@ -261,7 +263,7 @@ namespace kalkulator1 {
 			this->button7->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button7->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button7->Location = System::Drawing::Point(122, 185);
+			this->button7->Location = System::Drawing::Point(115, 157);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(55, 55);
 			this->button7->TabIndex = 9;
@@ -275,7 +277,7 @@ namespace kalkulator1 {
 			this->button8->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button8->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button8->Location = System::Drawing::Point(68, 185);
+			this->button8->Location = System::Drawing::Point(61, 157);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(55, 55);
 			this->button8->TabIndex = 8;
@@ -289,7 +291,7 @@ namespace kalkulator1 {
 			this->button9->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button9->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button9->Location = System::Drawing::Point(14, 185);
+			this->button9->Location = System::Drawing::Point(7, 157);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(55, 55);
 			this->button9->TabIndex = 7;
@@ -303,7 +305,7 @@ namespace kalkulator1 {
 			this->button10->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button10->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button10->Location = System::Drawing::Point(14, 347);
+			this->button10->Location = System::Drawing::Point(7, 319);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(109, 55);
 			this->button10->TabIndex = 10;
@@ -317,7 +319,7 @@ namespace kalkulator1 {
 			this->button11->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button11->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button11->Location = System::Drawing::Point(122, 347);
+			this->button11->Location = System::Drawing::Point(115, 319);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(55, 55);
 			this->button11->TabIndex = 11;
@@ -331,7 +333,7 @@ namespace kalkulator1 {
 			this->button12->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button12->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button12->Location = System::Drawing::Point(176, 293);
+			this->button12->Location = System::Drawing::Point(169, 265);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(55, 109);
 			this->button12->TabIndex = 12;
@@ -345,7 +347,7 @@ namespace kalkulator1 {
 			this->button13->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button13->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button13->Location = System::Drawing::Point(176, 185);
+			this->button13->Location = System::Drawing::Point(169, 157);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(55, 55);
 			this->button13->TabIndex = 14;
@@ -359,7 +361,7 @@ namespace kalkulator1 {
 			this->button14->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button14->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button14->Location = System::Drawing::Point(176, 239);
+			this->button14->Location = System::Drawing::Point(169, 211);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(55, 55);
 			this->button14->TabIndex = 13;
@@ -373,7 +375,7 @@ namespace kalkulator1 {
 			this->button15->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button15->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button15->Location = System::Drawing::Point(122, 131);
+			this->button15->Location = System::Drawing::Point(115, 103);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(55, 55);
 			this->button15->TabIndex = 16;
@@ -387,7 +389,7 @@ namespace kalkulator1 {
 			this->button16->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button16->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button16->Location = System::Drawing::Point(14, 131);
+			this->button16->Location = System::Drawing::Point(7, 103);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(109, 55);
 			this->button16->TabIndex = 15;
@@ -401,7 +403,7 @@ namespace kalkulator1 {
 			this->button17->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button17->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button17->Location = System::Drawing::Point(176, 131);
+			this->button17->Location = System::Drawing::Point(169, 103);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(55, 55);
 			this->button17->TabIndex = 17;
@@ -411,11 +413,11 @@ namespace kalkulator1 {
 			// 
 			// button18
 			// 
-			this->button18->BackColor = System::Drawing::Color::LightGray;
+			this->button18->BackColor = System::Drawing::Color::OrangeRed;
 			this->button18->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button18->Font = (gcnew System::Drawing::Font(L"DejaVu Sans", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button18->Location = System::Drawing::Point(230, 131);
+			this->button18->Location = System::Drawing::Point(223, 103);
 			this->button18->Name = L"button18";
 			this->button18->Size = System::Drawing::Size(55, 55);
 			this->button18->TabIndex = 21;
@@ -425,11 +427,11 @@ namespace kalkulator1 {
 			// 
 			// button19
 			// 
-			this->button19->BackColor = System::Drawing::Color::LightGray;
+			this->button19->BackColor = System::Drawing::Color::OrangeRed;
 			this->button19->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button19->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button19->Location = System::Drawing::Point(230, 185);
+			this->button19->Location = System::Drawing::Point(223, 157);
 			this->button19->Name = L"button19";
 			this->button19->Size = System::Drawing::Size(55, 55);
 			this->button19->TabIndex = 20;
@@ -439,11 +441,11 @@ namespace kalkulator1 {
 			// 
 			// button20
 			// 
-			this->button20->BackColor = System::Drawing::Color::LightGray;
+			this->button20->BackColor = System::Drawing::Color::OrangeRed;
 			this->button20->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button20->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button20->Location = System::Drawing::Point(230, 239);
+			this->button20->Location = System::Drawing::Point(223, 211);
 			this->button20->Name = L"button20";
 			this->button20->Size = System::Drawing::Size(55, 55);
 			this->button20->TabIndex = 19;
@@ -453,11 +455,11 @@ namespace kalkulator1 {
 			// 
 			// button21
 			// 
-			this->button21->BackColor = System::Drawing::Color::LightGray;
+			this->button21->BackColor = System::Drawing::Color::OrangeRed;
 			this->button21->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button21->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button21->Location = System::Drawing::Point(230, 293);
+			this->button21->Location = System::Drawing::Point(223, 265);
 			this->button21->Name = L"button21";
 			this->button21->Size = System::Drawing::Size(55, 109);
 			this->button21->TabIndex = 18;
@@ -471,7 +473,7 @@ namespace kalkulator1 {
 			this->button22->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button22->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button22->Location = System::Drawing::Point(302, 347);
+			this->button22->Location = System::Drawing::Point(302, 319);
 			this->button22->Name = L"button22";
 			this->button22->Size = System::Drawing::Size(120, 55);
 			this->button22->TabIndex = 22;
@@ -485,7 +487,7 @@ namespace kalkulator1 {
 			this->button23->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button23->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button23->Location = System::Drawing::Point(302, 293);
+			this->button23->Location = System::Drawing::Point(302, 265);
 			this->button23->Name = L"button23";
 			this->button23->Size = System::Drawing::Size(120, 55);
 			this->button23->TabIndex = 23;
@@ -499,7 +501,7 @@ namespace kalkulator1 {
 			this->button24->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button24->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button24->Location = System::Drawing::Point(302, 239);
+			this->button24->Location = System::Drawing::Point(302, 211);
 			this->button24->Name = L"button24";
 			this->button24->Size = System::Drawing::Size(120, 55);
 			this->button24->TabIndex = 24;
@@ -513,7 +515,7 @@ namespace kalkulator1 {
 			this->button25->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button25->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button25->Location = System::Drawing::Point(302, 185);
+			this->button25->Location = System::Drawing::Point(302, 157);
 			this->button25->Name = L"button25";
 			this->button25->Size = System::Drawing::Size(120, 55);
 			this->button25->TabIndex = 25;
@@ -577,21 +579,21 @@ namespace kalkulator1 {
 			// standardToolStripMenuItem
 			// 
 			this->standardToolStripMenuItem->Name = L"standardToolStripMenuItem";
-			this->standardToolStripMenuItem->Size = System::Drawing::Size(130, 22);
+			this->standardToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->standardToolStripMenuItem->Text = L"Standard";
 			this->standardToolStripMenuItem->Click += gcnew System::EventHandler(this, &Plansza::standardToolStripMenuItem_Click);
 			// 
 			// finansowyToolStripMenuItem
 			// 
 			this->finansowyToolStripMenuItem->Name = L"finansowyToolStripMenuItem";
-			this->finansowyToolStripMenuItem->Size = System::Drawing::Size(130, 22);
+			this->finansowyToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->finansowyToolStripMenuItem->Text = L"Finansowy";
 			this->finansowyToolStripMenuItem->Click += gcnew System::EventHandler(this, &Plansza::finansowyToolStripMenuItem_Click_1);
 			// 
 			// graToolStripMenuItem
 			// 
 			this->graToolStripMenuItem->Name = L"graToolStripMenuItem";
-			this->graToolStripMenuItem->Size = System::Drawing::Size(130, 22);
+			this->graToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->graToolStripMenuItem->Text = L"Gra";
 			this->graToolStripMenuItem->Click += gcnew System::EventHandler(this, &Plansza::graToolStripMenuItem_Click);
 			// 
@@ -608,7 +610,7 @@ namespace kalkulator1 {
 			this->button26->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button26->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button26->Location = System::Drawing::Point(165, 438);
+			this->button26->Location = System::Drawing::Point(158, 402);
 			this->button26->Name = L"button26";
 			this->button26->Size = System::Drawing::Size(120, 55);
 			this->button26->TabIndex = 31;
@@ -622,7 +624,7 @@ namespace kalkulator1 {
 			this->button27->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button27->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button27->Location = System::Drawing::Point(165, 492);
+			this->button27->Location = System::Drawing::Point(158, 456);
 			this->button27->Name = L"button27";
 			this->button27->Size = System::Drawing::Size(120, 55);
 			this->button27->TabIndex = 30;
@@ -636,7 +638,7 @@ namespace kalkulator1 {
 			this->button28->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button28->Font = (gcnew System::Drawing::Font(L"DejaVu Sans Light", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(238)));
-			this->button28->Location = System::Drawing::Point(165, 546);
+			this->button28->Location = System::Drawing::Point(158, 510);
 			this->button28->Name = L"button28";
 			this->button28->Size = System::Drawing::Size(120, 55);
 			this->button28->TabIndex = 29;
@@ -647,7 +649,7 @@ namespace kalkulator1 {
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(15, 438);
+			this->pictureBox1->Location = System::Drawing::Point(8, 402);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(130, 130);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::AutoSize;
@@ -751,18 +753,32 @@ private: System::Void pomocToolStripMenuItem_Click_1(System::Object^ sender, Sys
 	Onas->Show();
 }		
 private: System::Void standardToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	Plansza::Width = 310;
-	Plansza::Height = 475;
+	Plansza::Width = 300;
+	Plansza::Height = 425;
+	Klawisze(true);
 }
 private: System::Void finansowyToolStripMenuItem_Click_1(System::Object^ sender, System::EventArgs^ e) {
 	Plansza::Width = 460;
-	Plansza::Height = 475;
+	Plansza::Height = 425;
+	Klawisze(true);
 }
 private: System::Void graToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	Plansza::Width = 310;
-	Plansza::Height = 650;
+	Plansza::Width = 300;
+	Plansza::Height = 620;
 	this->txtOkno->Text = "Zagramy ?";
+	Klawisze(false);
+	
 }
+
+	   private: void Klawisze(bool Widok) {       //funkcja pokazania lub ukrycia klawiszy
+		   button12->Visible = Widok;
+		   button13->Visible = Widok;
+		   button14->Visible = Widok;
+		   button17->Visible = Widok;
+		   button18->Visible = Widok;
+		   button19->Visible = Widok;
+		   button20->Visible = Widok;
+	   }
 private: System::Void przypnijToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Plansza::FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
 	TopMost = true;
@@ -909,7 +925,7 @@ private: System::Void button21_Click(System::Object^ sender, System::EventArgs^ 
 			this->pictureBox1->Image = imageList1->Images[2];
 		}
 		else {
-			this->txtOkno->Text = "żle...";
+			this->txtOkno->Text = "źle...";
 			this->pictureBox1->Image = imageList1->Images[1];
 		}		
 		break;
