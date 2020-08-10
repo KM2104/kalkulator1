@@ -1,4 +1,4 @@
 ﻿  Plansza.cpp
-C:\Users\Admin\source\repos\kalkulator1\kalkulator1\Plansza.h(994,25): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
+C:\Users\Admin\source\repos\kalkulator1\kalkulator1\Plansza.h(854,30): warning C4244: "argument": konwersja z "double" do "int", możliwa utrata danych
   Plansza.obj : napotkano moduł MSIL; konsolidowanie przyrostowe jest wyłączone dla modułów MSIL; zostanie wykonana pełna konsolidacja
   kalkulator1.vcxproj -> C:\Users\Admin\source\repos\kalkulator1\x64\Debug\kalkulator1.exe

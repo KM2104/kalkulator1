@@ -843,16 +843,25 @@ private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button11_Click(System::Object^ sender, System::EventArgs^ e) {
 	Wypisz(",");
 }
-private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
-	Random^ losuj = gcnew Random;
-	pierwsza = losuj->Next(1, 20); 
-	druga = losuj->Next(1, 20);
-	testuj = pierwsza + druga;
 
-	this->txtOkno->Text = pierwsza + " + " + druga + " = ?";
-	status = true;
-	operacja = 't';
-	pictureBox1->Image = imageList1->Images[0];
+private: void Losowanie(int Start, int Stop, String^ Znak) {    //nasza funkcja losowania w gra
+	Random^ losuj = gcnew Random;
+	pierwsza = losuj->Next(Start, Stop);     //liczba pierwsza = losowana ->z zakresu (od...., do...)
+	if (Znak != "-") {                       //warunek dla odejmowania (wynik bez liczb ujemnych)
+		druga = losuj->Next(Start, Stop);
+	} 
+	else {
+		druga = losuj->Next(Start, pierwsza);
+	}
+	this->txtOkno->Text = pierwsza + Znak + druga + " = ?";  //pokazywany komunikat w oknie
+	pictureBox1->Image = imageList1->Images[0];             //pokazywana grafika 
+	status = true;                                          //możliwość dalszej gry 
+	operacja = 't';	                                        //patrz switch case 't'
+}
+
+private: System::Void button26_Click(System::Object^ sender, System::EventArgs^ e) {
+	Losowanie(1, 20, "+");
+	testuj = pierwsza + druga;	
 }
 private: System::Void button12_Click(System::Object^ sender, System::EventArgs^ e) {
 	pierwsza = Convert::ToDouble(txtOkno->Text);
@@ -989,26 +998,12 @@ private: System::Void button22_Click(System::Object^ sender, System::EventArgs^ 
 	operacja = 'x';      //narzut
 }
 private: System::Void button27_Click(System::Object^ sender, System::EventArgs^ e) {
-	Random^ losuj = gcnew Random;
-	pierwsza = losuj->Next(1, 20);
-	druga = losuj->Next(1, pierwsza);
-	testuj = pierwsza - druga;
-
-	this->txtOkno->Text = pierwsza + " - " + druga + " = ?";
-	status = true;
-	operacja = 't';
-	pictureBox1->Image = imageList1->Images[0];
+	Losowanie(1, 20, "-");
+	testuj = pierwsza - druga;		
 }
 private: System::Void button28_Click(System::Object^ sender, System::EventArgs^ e) {
-	Random^ losuj = gcnew Random;
-	pierwsza = losuj->Next(1, 10);
-	druga = losuj->Next(1, 10);
-	testuj = pierwsza * druga;
-
-	this->txtOkno->Text = pierwsza + " * " + druga + " = ?";
-	status = true;
-	operacja = 't';
-	pictureBox1->Image = imageList1->Images[0];
+	Losowanie(1, 10, "*");
+	testuj = pierwsza * druga;	
 }
 };
 }
